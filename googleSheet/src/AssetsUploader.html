@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <script>
+    function onSuccess(res) {
+      google.script.host.close();
+    }
+
+    function onFailure(error) {
+      const p = document.getElementById("message");
+      p.innerHTML = error;
+    }
+    function onSubmit(event) {
+      const formdata = new FormData();
+      event.preventDefault();
+      let file = event.target.file.files[0];
+      formdata.append("asset[upload]", file, file.name);
+
+      google.script.run
+        .withSuccessHandler(onSuccess)
+        .withFailureHandler(onFailure)
+        .onUploadAsset(`${file}`, file.name);
+    }
+  </script>
+  <body>
+    <p id="message"></p>
+    <form onsubmit="onSubmit(event)">
+      <input id="file" type="file" />
+      <input type="submit" name="Upload" id="upload" value="Upload" />
+    </form>
+  </body>
+</html>

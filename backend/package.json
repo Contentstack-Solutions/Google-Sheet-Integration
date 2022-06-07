@@ -1,0 +1,29 @@
+{
+  "name": "sheet_csv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Umesh More",
+  "license": "ISC",
+  "dependencies": {
+    "@contentstack/json-rte-serializer": "^2.0.0",
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.0.4",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.3",
+    "jsdom": "^19.0.0",
+    "json2csv": "^5.0.7",
+    "lodash.flattendeep": "^4.4.0",
+    "lodash.get": "^4.4.2",
+    "lodash.has": "^4.5.2",
+    "lodash.set": "^4.3.2",
+    "lodash.unset": "^4.5.2",
+    "mkdirp": "^1.0.4"
+  }
+}

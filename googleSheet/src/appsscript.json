@@ -1,0 +1,29 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/spreadsheets.currentonly",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/script.container.ui",
+    "https://www.googleapis.com/auth/script.scriptapp"
+  ],
+  "addOns": {
+    "common": {
+      "layoutProperties": {
+        "primaryColor": "#6c5ce7",
+        "secondaryColor": "#475161"
+      },
+      "name": "Contentstack",
+      "logoUrl": "https://images.contentstack.io/v3/assets/blt59a17a9e32f9f2b3/blt66bfb51e8c0ca5ea/604ce63f887c870bbd854de1/logo.png",
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "universalActions": []
+    },
+    "sheets": {}
+  }
+}

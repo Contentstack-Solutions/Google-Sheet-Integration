@@ -39,18 +39,120 @@ This involves three steps:
 
 1. Upload that zip file to AWS Lambda.
 
+
 ## 2. Set up your Google App Script project.
-To set up the integration, log into your Google [Apps Script](https://script.google.com/home) account and proceed with the   following steps:
+To set up the integration, perform the following steps:
 
-1. Go to the Shared  [Apps Script](https://script.google.com/home) Project and click on an OverView to make a copy of the  project.
+1. Go to directory  **“googleSheet/src”**
 
-![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt9d54f02e047c027d/629f8139ae6f0e4156d1ad34/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.002.png)
+             cd googleSheet/src
 
-2. After successfully copying the project, go to the Home.gs file.
+2. You need to install Clasp to push the local code to Apps Script.
+
+             npm install @google/clasp -g
+
+
+
+3. After installing the Clasp, we need to log in using the below command.
+
+             clasp login
+
+
+
+4. Your terminal will open a tab in your browser. Select your Gmail account and click  ‘Allow’ for permissions.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt0eca2657a0875d5a/62a0899605f1d157f3a88606/cli.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltaf812d7adf9366cb/62a089970ae1a75bf9d5d5e0/app_scripyt.png)
+
+
+5. You will see an **“Authorization successful”** message on the terminal.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt913113fc3455f519/62a08d5496b55a5696224e0d/success.jpg) 
+
+
+
+
+
+
+
+
+
+
+6. After this, you need to go to your  [App Script](https://script.google.com/u/1/home/usersettings) Settings.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt4d706a69a11ef0f3/62a09001e3bbf658a27e0013/settings.png)
+
+7. Turn on the Google App Script API. 
+
+8. In the next step, we are going to create our App Script Project from the terminal, add your title of project in the place of [scriptTitle]. 
+
+              clasp create [scriptTitle]
+
+
+
+9. After executing the above command, select **‘sheets’** as an option from the list below.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt18a8d9c20f7221e9/62a094871944ac5ac425e8be/select_script.jpg)
+
+
+
+
+
+
+
+
+10.Your script was created successfully. It will show your addon link in the terminal.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt0a2859004c564d96/62a096052680af592233212c/successfuly_creted.jpg)
+
+
+
+
+11. Now, we need to push the code on the previously created App Script Project. For this, use the following command. Executing this command will prompt the following question. type **’y’** to proceed.
+
+
+
+              clasp push
+
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltba51cf4b935a3a3e/62a097e4f4da744f1d8c545f/manifest.jpg)
+
+
+
+
+
+
+
+
+12. Hurray!!! We have successfully pushed our App Script.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltf773ca708fa11958/62a099d9c949fd5059e8852e/pushed.jpg)
+
+
+
+
+
+13. After successfully pushing the App script project, go to the Home.gs file.
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blte564a1b458a1f1d9/629f8139a3e9730f695d1b23/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.003.png)
 
-3. After the above step, just click on "Run."
+14. After the above step, just click on "Run."
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt42309be884e651e6/629f813924e98e0f7a831d13/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.004.png)
 
@@ -58,13 +160,13 @@ To set up the integration, log into your Google [Apps Script](https://script.goo
 
 
 
-4. After running the file, it will ask us for permission.
+15. After running the file, it will ask us for permission.
 
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltdf3be6cc17c0c41a/629f8139b86a794d785d6697/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.005.png)
 
 
-5. After clicking on ‘**Review permissions**’, give the permission to the project.
+16. After clicking on ‘**Review permissions**’, give the permission to the project.
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt13fea0e41fed3fd7/629f81397e445a4356bd8bab/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.006.jpeg)
 
@@ -92,12 +194,12 @@ To set up the integration, log into your Google [Apps Script](https://script.goo
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltc174ccedff4d242a/629f813931e9d30f65bf1ca0/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.007.jpeg)
 
-6. Next step is to add the link of your aws backend. In file **Branding.gs**
+17. Next step is to add the link of your aws backend. In file **Branding.gs**
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltd3b3d246244ad061/629f8139e2a136428b9a8c98/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.008.png)
 
 
-7. The next step is to click on deploy the project. After this select ‘**Test deployment**’. It will  open modal, click on install then click on done. Now your project has deployed on google cloud.
+18. The next step is to click on deploy the project. After this select ‘**Test deployment**’. It will  open modal, click on install then click on done. Now your project has deployed on google cloud.
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltbef437acb6a2fdbe/629f8139c1a31f435ce9d78d/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.009.png)
 

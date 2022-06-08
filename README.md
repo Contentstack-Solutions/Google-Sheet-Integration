@@ -258,8 +258,7 @@ To start using it, just open any [spreadsheet](https://docs.google.com/spreadshe
 5. No need to set an updated boolean value for creation. When creating the entry, do not add anything in the uid field.
 6. When you create an entry in the sheet, don't add blank cells to the sheet. If you add a blank cell in the sheet, it will create a new entry, because the title field is not required in Contentstack. 
 7. When you update json RTE, there is a column called 'json.children'. in that column you can add html or text.
-
-
+8. When you update something in a Google Sheet, you need to save those changed things first and then push them. Use **“ctrl+s”** to save them.
 
 
 

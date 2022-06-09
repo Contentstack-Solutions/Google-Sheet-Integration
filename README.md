@@ -16,8 +16,10 @@ This involves three steps:
 1. Using the Google Sheet integration.
 ## 1. Setting up your NodeJS Backend on Lambda.
  Configure Your NodeJS Backend on Lambda To set up the backend, clone this [Github](https://github.com/Contentstack-Solutions/Google-Sheet-Backend-Code) repo  and proceed with the following steps.
+ 
+1. For our file system (elastic file system), we need to create a virtual private cloud (VPC). 
 
-1. After cloning the github repo, go to the **"backend/utils/config.js"**  file, and update the **“FILESYSTEM\_BASE\_PATH”** and add your AWS EFS Path. (Note: the folder name is “Contents.” Don't change it.) 
+2. After cloning the github repo, go to the **"backend/utils/config.js"**  file, and update the **“FILESYSTEM\_BASE\_PATH”** and add your AWS EFS Path. (Note: the folder name is “Contents.” Don't change it.) 
 
      ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt2c40a320856ab64b/629f81599bb72a0f7439f53e/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.001.jpeg)
 
@@ -25,19 +27,19 @@ This involves three steps:
 
 
 
-1. The next step is to install node\_modules, for that open terminal. Run the following command.
+3. The next step is to install node\_modules, for that open terminal. Run the following command.
 
              npm install
 
-1. The next step is to create a zip for our lambda function. Run the following command in your root folder.
+4. The next step is to create a zip for our lambda function. Run the following command in your root folder.
 
 
 
              zip -r lambda.zip .
 
-1. Following which, a zip file called **"lambda.zip"** will be created in the root directory.
+5. Following which, a zip file called **"lambda.zip"** will be created in the root directory.
 
-1. Upload that zip file to AWS Lambda.
+6. Upload that zip file to AWS Lambda.
 
 
 ## 2. Set up your Google App Script project.

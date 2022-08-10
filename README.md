@@ -42,7 +42,7 @@ This involves three steps:
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt331b92391f69af0a/62f3a1d018595876bf3187dc/Screenshot_2022-08-10_at_5.47.00_PM.png)
 
-7. after that, we need to **Add trigger**.
+7. After that, we need to **Add trigger**.
 
  ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt19add8dc1bfe50a8/62f3a35942380217691bfc75/Screenshot_2022-08-10_at_5.53.30_PM.png)
 

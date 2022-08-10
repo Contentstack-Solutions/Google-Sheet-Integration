@@ -42,11 +42,11 @@ This involves three steps:
 
 ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt331b92391f69af0a/62f3a1d018595876bf3187dc/Screenshot_2022-08-10_at_5.47.00_PM.png)
 
-7. After that, we need to **Add trigger**.
+7. after that, we need to **Add trigger**.
 
  ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt19add8dc1bfe50a8/62f3a35942380217691bfc75/Screenshot_2022-08-10_at_5.53.30_PM.png)
 
-8. The next step is to "Select a source" as "API Gateway" after that in the "Intent" select "Create a new API", after that select "API type" as "REST API" after that select "Security" as "open".
+8. the next step is to "Select a source" as "API Gateway" after that in the "Intent" select "Create a new API", after that select "API type" as "REST API" after that select "Security" as "open".
 
 
 ## 2. Set up your Google App Script project.

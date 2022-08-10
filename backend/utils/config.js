@@ -1,7 +1,7 @@
 const get = require("lodash.get");
 const unset = require("lodash.unset");
 
-const FILESYSTEM_BASE_PATH = "/mnt/efs/Contents";
+const FILESYSTEM_BASE_PATH = "/tmp/Contents";
 //add your url of aws EFS
 
 const fieldsToBeIgnoreWhileUpdatingEntry = [

@@ -5,7 +5,7 @@
 # Prerequisites
 - Basic understanding of JavaScript
 - [Contentstack](https://app.contentstack.com/#!/login) account.
-- Node.js version 12 or later.
+- Node.js version 14
 - Lambda AWS Account
 
 # Set Up Your App
@@ -17,29 +17,36 @@ This involves three steps:
 ## 1. Setting up your NodeJS Backend on Lambda.
  Configure Your NodeJS Backend on Lambda To set up the backend, clone this [Github](https://github.com/Contentstack-Solutions/Google-Sheet-Backend-Code) repo  and proceed with the following steps.
  
-1. For our file system (elastic file system), we need to create a virtual private cloud (VPC). 
-
-2. After cloning the github repo, go to the **"backend/utils/config.js"**  file, and update the **“FILESYSTEM\_BASE\_PATH”** and add your AWS EFS Path. (Note: the folder name is “Contents.” Don't change it.) 
-
-     ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt2c40a320856ab64b/629f81599bb72a0f7439f53e/Aspose.Words.9d4b1670-1c6d-4297-bf63-e9fcd1521be5.001.jpeg)
-
-
-
-
-
-3. The next step is to install node\_modules, for that open terminal. Run the following command.
+1. Go to the directory  “backend”, and install node_modules. in that open terminal. Run the following command.
 
              npm install
 
-4. The next step is to create a zip for our lambda function. Run the following command in your root folder.
+2. The next step is to create a zip for our lambda function. Run the following command in your root folder.
 
 
 
              zip -r lambda.zip .
 
-5. Following which, a zip file called **"lambda.zip"** will be created in the root directory.
+3. Following which, a zip file called **"lambda.zip"** will be created in the root directory.
 
-6. Upload that zip file to AWS Lambda.
+
+
+
+4. Now go to your aws Lambda Function and click on "create function".
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt064978f9c7bf440c/62f3a03c57ac0577de0c08a1/Screenshot_2022-08-10_at_5.39.46_PM.png)
+
+5. The next step is to select "runtime" as "Node.js 14x".
+
+6. The next step is to upload **"lambda.zip"** on your aws acccount.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt331b92391f69af0a/62f3a1d018595876bf3187dc/Screenshot_2022-08-10_at_5.47.00_PM.png)
+
+7. After that, we need to **Add trigger**.
+
+ ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt19add8dc1bfe50a8/62f3a35942380217691bfc75/Screenshot_2022-08-10_at_5.53.30_PM.png)
+
+8. the next step is to "Select a source" as "API Gateway" after that in the "Intent" select "Create a new API", after that select "API type" as "REST API" after that select "Security" as "open".
 
 
 ## 2. Set up your Google App Script project.

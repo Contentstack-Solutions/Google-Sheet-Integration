@@ -71,11 +71,6 @@ const convertEntry = async (
         api_key: api_key,
       });
       let uids = await content_typeField(res.data.content_type.schema);
-      // uids.map((item) => {});
-
-      // let filterd = uids.filter((item) => {
-      //   if (typeof item === "object") !paths.includes(item);
-      // });
       let ctObj = uids.reduce(function (obj, v) {
         if (typeof v === "object") {
           Object.entries(v).forEach(([key, value]) => {

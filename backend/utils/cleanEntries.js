@@ -72,12 +72,6 @@ async function cleanEntries(entries, language, contentTypeUid, paths) {
         set(entry, rtePath[0], htmlValue);
       }
 
-      let workflow = "";
-      // const envArr = [];
-      if ("_workflow" in entry) {
-        workflow = entry["_workflow"]["name"];
-        delete entry["_workflow"];
-      }
       entry = flatten(entry);
       if (paths && paths.length > 1) {
         Object.entries(entry).forEach(([key, value]) => {
@@ -87,31 +81,18 @@ async function cleanEntries(entries, language, contentTypeUid, paths) {
         });
       }
 
-      // entry["publish_details"] = envArr;
-      // entry["_workflow"] = workflow;
-      // entry["ACL"] = JSON.stringify({}); // setting ACL to empty obj
-      // entry["content_type_uid"] = contentTypeUid; // content_type_uid is being returned as 'uid' from the sdk for some reason
-      // entry['url'] might also be wrong
-      delete entry.stackHeaders;
-      delete entry.update;
-      delete entry.delete;
-      delete entry.fetch;
-      delete entry.publish;
-      delete entry.unpublish;
-      delete entry.import;
-      delete entry.publishRequest;
+      delete entry?.stackHeaders;
+      delete entry?.update;
+      delete entry?.delete;
+      delete entry?.fetch;
+      delete entry?.publish;
+      delete entry?.unpublish;
+      delete entry?.import;
+      delete entry?.publishRequest;
 
       if (entry?.title && entry?.uid) {
         entry.Updated = false;
       }
-
-      // delete entry._version;
-      // delete entry._in_progress;
-      // delete entry.updated_by;
-      // delete entry.created_by;
-      // delete entry.created_at;
-      // delete entry.updated_at;
-      // delete entry.ACL;
       return entry;
     });
 

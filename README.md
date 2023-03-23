@@ -14,7 +14,7 @@ This involves three steps:
 1. Setting up your NodeJS Backend on Lambda. 
 1. Setting up your Google App Script project.
 1. Using the Google Sheet integration.
-## 1. Setting up your NodeJS Backend on Lambda.
+## 1A. Setting up your NodeJS Backend on Lambda.
  Configure Your NodeJS Backend on Lambda To set up the backend, clone this [Github](https://github.com/Contentstack-Solutions/Google-Sheet-Backend-Code) repo  and proceed with the following steps.
  
 1. Go to the directory  “backend”, and install node_modules. in that open terminal. Run the following command.
@@ -48,6 +48,36 @@ This involves three steps:
 
 8. the next step is to "Select a source" as "API Gateway" after that in the "Intent" select "Create a new API", after that select "API type" as "REST API" after that select "Security" as "open".
 
+## 1B. Setting up your NodeJS Backend on GCP.
+
+ Configure Your NodeJS Backend on GCP To set up the backend, clone this [Github](https://github.com/Contentstack-Solutions/Google-Sheet-Backend-Code) repo and proceed with the following steps.
+ 
+ 1. Go to the directory  “backend”, and install node_modules. in that open terminal. Run the following command.
+ 
+              npm install
+              
+              
+  2. The next step is to create a zip for our gcp function. Run the following command in your root folder. 
+  
+  
+              zip -r gcp.zip .
+              
+              
+  3. Following which, a zip file called **"gcp.zip"** will be created in the root directory.   
+  
+  
+  4. Now go to your GCP Function and click on "create function".
+  
+   ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blta0fee3eab9f57dd8/641c815baf1f5455e8f4a052/Screenshot_2023-03-23_at_10.08.09_PM.png)
+  
+
+5. The next step is to select "Trigger" as "HTTP" and Select Authentication as "Allow unauthenticated invocations".
+
+ ![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/blt0f47f71415809526/641c815bc7930007b34db4a1/Screenshot_2023-03-23_at_10.09.09_PM.png)
+
+5. The next step is to select "runtime" as "Node.js 14x" and then Select "ZIP Upload" in source code, after that name Entry point function as "helloWorld", in ZIP uploade select zip file and select stage bucket.
+
+![](https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltecfa525321db95e0/641c815b20db676ecbce1e78/Screenshot_2023-03-23_at_10.10.30_PM.png)
 
 ## 2. Set up your Google App Script project.
 To set up the integration, perform the following steps:

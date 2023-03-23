@@ -2,7 +2,7 @@ const UNKNOWN_OPERATION = "Unknown Operation";
 const { convertEntry } = require("./utils/main");
 const { initializeEntry } = require("./utils/updateEntry");
 
-exports.handler = async (event) => {
+const handler = async (event) => {
   try {
     switch (event.httpMethod) {
       case "POST": {
@@ -57,5 +57,20 @@ exports.handler = async (event) => {
       },
       body: err,
     };
+  }
+};
+
+exports.helloWorld = async (req, res) => {
+  try {
+    req.headers.contentTypeUid = req.headers.contenttypeuid;
+    const response = await handler({
+      queryStringParameters: req.query,
+      headers: req.headers,
+      body: JSON.stringify(req.body),
+      httpMethod: "POST",
+    });
+    res.status(200).send(response.body);
+  } catch (err) {
+    res.status(500).json({ error: err });
   }
 };

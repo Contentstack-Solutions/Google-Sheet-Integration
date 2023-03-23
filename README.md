@@ -48,9 +48,9 @@ This involves three steps:
 
 8. the next step is to "Select a source" as "API Gateway" after that in the "Intent" select "Create a new API", after that select "API type" as "REST API" after that select "Security" as "open".
 
-## 1B. Setting up your NodeJS Backend on GCP.
+## 1B. Setting up your NodeJS Backend on GCP. (for GCP use this [repo](https://github.com/Contentstack-Solutions/Google-Sheet-Integration/tree/main-gcp))
 
- Configure Your NodeJS Backend on GCP To set up the backend, clone this [Github](https://github.com/Contentstack-Solutions/Google-Sheet-Backend-Code) repo and proceed with the following steps.
+ Configure Your NodeJS Backend on GCP To set up the backend, clone this [Github](https://github.com/Contentstack-Solutions/Google-Sheet-Integration/tree/main-gcp) repo and proceed with the following steps.
  
  1. Go to the directory  “backend”, and install node_modules. in that open terminal. Run the following command.
  

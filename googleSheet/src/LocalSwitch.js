@@ -12,21 +12,19 @@ function selectLocale() {
     .setOnChangeAction(
       CardService.newAction().setFunctionName("checkedLocale")
     );
-  for (locale of data.locales) {
-    if (locale.code === "en-us") {
+  for (const locale of data?.locales) {
+    if (locale?.code === "en-us") {
       setCurrentLocales("en-us");
+    } else {
+      setCurrentLocales(locale?.code);
     }
+
     checkboxGroup.addItem(
       locale.name,
       locale.code,
       locale.code === "en-us" ? true : false
     );
   }
-
-  // const localeControls = createCheckBox(data);
-  // for(const chackBox of  localeControls ) {
-  //   localeSection.addWidget(chackBox)
-  // }
   return localeSection.addWidget(checkboxGroup);
 }
 

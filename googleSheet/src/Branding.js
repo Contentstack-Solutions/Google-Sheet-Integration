@@ -1,5 +1,5 @@
 const SMALL_LOGO =
-  "https://images.contentstack.io/v3/assets/blt59a17a9e32f9f2b3/blt66bfb51e8c0ca5ea/604ce63f887c870bbd854de1/logo.png";
+  "https://images.contentstack.io/v3/assets/blt1c11a1ad74628afa/bltef44905e337f6f93/6447743331281610d8efa1d9/00000163-51db-5cf5-2090-5c4936ef029e_(2).jpg";
 const SHEET_HEADER_BG = "#6c5ce7";
 const SHEET_HEADER_FG = "#FFFFFF";
 const SHEET_HEADER_FONT_SIZE = 11;
